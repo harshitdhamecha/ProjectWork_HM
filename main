@@ -1,0 +1,23 @@
+import React from 'react'
+import './App.css';
+const App = () => {
+  return (
+    <div className='App'>
+      <div className='box'/>
+        <div className='text'>
+        Welcome to our
+        EV service platform 
+        </div>
+        
+        <div className='login-box'>
+          <input className='login-button'/>
+          
+          <p className='box-text'> Hello </p>
+        </div>
+          
+      
+    </div>
+  )
+}
+
+export default App
