@@ -1,23 +1,85 @@
-import React from 'react'
+import React, { useState } from 'react';
+import { GoogleLogin } from 'react-google-login';
+
 import './App.css';
+
 const App = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+
+  const handleLogin = () => {
+    // Perform validation and login logic here
+    if (email && password) {
+      // Check if the credentials match
+      if (email === 'example@example.com' && password === 'password') {
+        alert('Login Successful');
+        // Redirect or perform other actions
+      } else {
+        alert('Invalid credentials');
+      }
+    } else {
+      alert('Please enter email and password');
+    }
+  };
+  const handleGoogleLoginSuccess = (response) => {
+    // Handle successful Google account login here
+    const { profileObj } = response;
+    const { email } = profileObj;
+    setEmail(email);
+    alert(`Google account login successful. Email: ${email}`);
+    // Redirect or perform other actions
+  };
+
+  const handleGoogleLoginFailure = (error) => {
+    // Handle failed Google account login here
+    console.log('Google login failed:', error);
+    alert('Google account login failed');
+  };
+
+  const handleGoogleLogin = () => {
+    // Handle Google account login logic here
+    // You can use the Google Sign-In API to implement this functionality
+    alert('Google account login is not implemented yet');
+  };
+
   return (
     <div className='App'>
-      <div className='box'/>
-        <div className='text'>
-        Welcome to our
-        EV service platform 
-        </div>
+      <div className='box' />
+      <div className='text'>
+        Welcome to our EV service platform
+      </div>
+      <div className='login-box'>
+        <div className='box-text'>Kindly login to continue</div>
+        <input
+          type='text'
+          placeholder='Enter e-mail to continue'
+          className='login-input'
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type='password'
+          placeholder='Enter your password'
+          className='login-inputp'
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button className='login-button' onClick={handleLogin}>Login</button>
+        <div className='line'></div>
+        <div className='line-text'>or</div>
+        <div className='line2'></div>
         
-        <div className='login-box'>
-          <input className='login-button'/>
-          
-          <p className='box-text'> Hello </p>
-        </div>
-          
-      
+        <GoogleLogin
+          clientId="422227886742-n0tlv1jt2e5k7g1k9hv46onku3tefg01.apps.googleusercontent.com"
+          buttonText="Login with Google"
+          className='login-google'
+          onSuccess={handleGoogleLoginSuccess}
+          onFailure={handleGoogleLoginFailure}
+          cookiePolicy={'single_host_origin'}
+        />
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
