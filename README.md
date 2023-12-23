@@ -27,6 +27,10 @@ Feel free to explore the code for more details!
 
 The app uses the Google Login API to facilitate Google account authentication.
 
+## 🖌️ Figma UI
+
+Check out the [Figma UI](https://www.figma.com/file/5gaQcRrI2g4qnEJGVCuA3C/Happiest-Minds?type=design&node-id=10%3A19&mode=design&t=T6rKdl5tJNbgBTNW-1) for the project.
+
 ## 👩‍💻 Author
 
 - Harshit Dhamecha
