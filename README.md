@@ -1,3 +1,5 @@
+![EV Service Platform](https://github.com/harshitdhamecha/Work_at_HappiestMinds/assets/137476624/027b68d1-4d8e-4788-940a-ac14cb5d765c)
+
 # 🚗 EV Service Platform
 
 Welcome to the EV Service Platform, a React app designed for user authentication. This application provides a simple login interface and supports Google account login.
