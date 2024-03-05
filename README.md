@@ -36,6 +36,7 @@ Check out the [Figma UI](https://www.figma.com/file/5gaQcRrI2g4qnEJGVCuA3C/Happi
 ## 👩‍💻 Author
 
 - Harshit Dhamecha
+- Access my internship completion certificate [here](https://drive.google.com/file/d/16ISiQzrg-zrLIRHtejS9G99xoORzCZpg/view?usp=sharing)
 
 ## 📄 License
 
